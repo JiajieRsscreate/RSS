@@ -1,1 +1,25 @@
-LIN
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>生成RSS链接</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="rss.js"></script>
+    <script src="FileSaver.js"></script>
+
+</head>
+<body>
+	<h1>生成RSS链接</h1>
+	<form>
+		<label for="title">标题：</label>
+		<input type="text" id="title" name="title"><br>
+		<label for="link">链接：</label>
+		<input type="url" id="link" name="link"><br>
+		<label for="description">描述：</label>
+		<textarea id="description" name="description"></textarea><br>
+		<button type="button" id="generate">生成</button>
+	</form>
+	<p>生成的RSS链接：</p>
+	<p><a id="rss-link" href="#">点击这里</a>订阅</p>
+</body>
+</html>
