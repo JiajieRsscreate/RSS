@@ -17,11 +17,15 @@
 				url: "rss.xml",
 				dataType: "xml",
 				success: function(data) {
-					var title = $(data).find("title").first().text();
-					var link = $(data).find("link").first().text();
-					var description = $(data).find("description").first().text();
-					var rssLink = "<a href='" + link + "' target='_blank' rel='noopener noreferrer'><img src='https://cdn.iconscout.com/icon/free/png-256/rss-70-1175139.png' width='16' height='16' alt='RSS icon'>" + title + "</a>";
-					$("#result").html("你的RSS订阅链接是：" + rssLink);
+					var rssLinks = "";
+					$(data).find("channel").each(function() {
+						var title = $(this).find("title").first().text();
+						var link = $(this).find("link").first().text();
+						var description = $(this).find("description").first().text();
+						var rssLink = "<a href='" + link + "' target='_blank' rel='noopener noreferrer'><img src='https://cdn.iconscout.com/icon/free/png-256/rss-70-1175139.png' width='16' height='16' alt='RSS icon'>" + title + "</a>";
+						rssLinks += rssLink + "<br>";
+					});
+					$("#result").html("你的RSS订阅链接是：<br>" + rssLinks);
 				},
 				error: function() {
 					alert("无法读取RSS文件");
@@ -30,6 +34,6 @@
 		});
 	});
 	</script>
-  <p>11</p>
+  <p>22</p>
 </body>
 </html>
