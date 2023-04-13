@@ -6,7 +6,7 @@
 	<script>
 		$(document).ready(function() {
 			// Replace "your-xml-file.xml" with the name of your local XML file
-			$.get("C:\Users\jiaji\OneDrive\桌面\RSSPages\rss.xml", function(xml) {
+			$.get("\rss.xml", function(xml) {
 				var rssLink = $(xml).find("channel link").text();
 				$("#rss-link").attr("href", rssLink);
 			});
