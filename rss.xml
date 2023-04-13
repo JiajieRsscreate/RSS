@@ -1,7 +1,18 @@
----
-layout: none
----
-{% include xml-header %}
 <?xml version="1.0" encoding="UTF-8"?>
-{% feed_meta %}
-{% include xml-footer %}
+<rss version="2.0">
+<channel>
+<title>zz</title>
+<link>https://nyaa.si/?page=rss</link>
+<description>zz</description>
+<language>zh-cn</language>
+<generator>ChatGPT RSS generator</generator>
+</channel>
+<channel>
+<title>pp</title>
+<link>https://bangumi.moe/rss/latest</link>
+<description>pp</description>
+<language>zh-cn</language>
+<generator>ChatGPT RSS generator</generator>
+</channel>
+
+</rss>
