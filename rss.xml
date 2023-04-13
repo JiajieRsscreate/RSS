@@ -7,4 +7,11 @@
 <language>zh-cn</language>
 <generator>ChatGPT RSS generator</generator>
 </channel>
+<channel>
+<title>zz</title>
+<link>https://nyaa.si/?page=rss</link>
+<description>zz</description>
+<language>zh-cn</language>
+<generator>ChatGPT RSS generator</generator>
+</channel>
 </rss>
