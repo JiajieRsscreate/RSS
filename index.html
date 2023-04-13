@@ -17,14 +17,12 @@
 				url: "rss.xml",
 				dataType: "xml",
 				success: function(data) {
-					var rssLink = "";
-					$(data).find("channel").each(function() {
-						var title = $(this).find("title").first().text();
-						var link = $(this).find("link").first().text();
-						var description = $(this).find("description").first().text();
-						rssLink += "<a href='" + link + "' target='_blank' rel='noopener noreferrer'><img src='https://cdn.iconscout.com/icon/free/png-256/rss-70-1175139.png' width='16' height='16' alt='RSS icon'>" + title + "</a><br>";
-					});
-					$("#result").html("你的RSS订阅链接是：<br>" + rssLink);
+					var title1 = $(data).find("channel").eq(0).find("title").text();
+					var link1 = $(data).find("channel").eq(0).find("link").text();
+					var title2 = $(data).find("channel").eq(1).find("title").text();
+					var link2 = $(data).find("channel").eq(1).find("link").text();
+					var rssLink = "<a href='" + link1 + "' target='_blank' rel='noopener noreferrer'><img src='https://cdn.iconscout.com/icon/free/png-256/rss-70-1175139.png' width='16' height='16' alt='RSS icon'>" + title1 + "</a>" + "<br><a href='" + link2 + "' target='_blank' rel='noopener noreferrer'><img src='https://cdn.iconscout.com/icon/free/png-256/rss-70-1175139.png' width='16' height='16' alt='RSS icon'>" + title2 + "</a>";
+					$("#result").html("你的RSS订阅链接是：" + rssLink);
 				},
 				error: function() {
 					alert("无法读取RSS文件");
@@ -33,6 +31,6 @@
 		});
 	});
 	</script>
-  <p>33</p>
+  <p>44</p>
 </body>
 </html>
