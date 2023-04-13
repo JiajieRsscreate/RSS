@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>生成RSS链接</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="rss.js"></script>
-    <script src="FileSaver.js"></script>
+	<script src="FileSaver.js"></script>
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://www.example.com/feed" />
 
 
 </head>
+
 <body>
 	<h1>生成RSS链接</h1>
 	<form>
@@ -24,21 +26,22 @@
 	</form>
 	<p>生成的RSS链接：</p>
 	<p><a id="rss-link" href="#">点击这里</a>订阅</p>
-	<p>11</p>
+	<p>22</p>
 
 	<div id="rss"></div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/feedek/feedek.js"></script>
-<script>
-  $(document).ready(function() {
-    $('#rss').FeedEk({
-      FeedUrl: 'https://nyaa.si/?page=rss&q=subspleas+1080+Opus&c=0_0&f=0',
-      MaxCount: 10,
-      ShowDesc: true,
-      ShowPubDate: true
-    });
-  });
-</script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feedek/feedek.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#rss').FeedEk({
+				FeedUrl: 'https://nyaa.si/?page=rss&q=subspleas+1080+Opus&c=0_0&f=0',
+				MaxCount: 10,
+				ShowDesc: true,
+				ShowPubDate: true
+			});
+		});
+	</script>
 </body>
+
 </html>
