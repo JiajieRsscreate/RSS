@@ -134,7 +134,7 @@ body .shell-main-nav ul li a {
   text-align: center;
 }
 
-/*body .shell-main-nav ul li:nth-child(2):hover~.nav-box {
+body .shell-main-nav ul li:nth-child(2):hover~.nav-box {
   left: 120px;
   background-color: red;
 }
@@ -153,7 +153,7 @@ body .shell-main-nav ul li:nth-child(5):hover~.nav-box {
   left: 480px;
   background-color: #7df88e;
 }
-*/
+
 body .shell-main-lbt {
   position: relative;
   width: 100%;
